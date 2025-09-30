@@ -34,8 +34,6 @@ You will be redirected to your new applications settings page. Click the permiss
 
 And set the widest Individual Scopes for the purposes of this test application, i.e. write permissions for all categories, and press submit. As you go on to create other applications, you can be more selective with permissions and explore the Team Scopes area. 
 
-<img width="573" height="444" alt="image" src="https://github.com/user-attachments/assets/88588c1e-2d36-454a-b5c7-d278a303cb61" />
-
 <ins>Step 5.</ins>
 
 Return to the permission table and make a note of your App Key and your App Secret:
@@ -52,8 +50,51 @@ https://www.dropbox.com/oauth2/authorize?client_id=APPKEYHERE&response_type=code
 
 <ins>Step 7.</ins>
 
+Press continue, then allow, and then make note of your access code.
+
 <ins>Step 8.</ins>
 
+You can now use the access code, app key, and app secret to create a request to retrieve your immutable refresh token.
+
+We will run this simple HTTP request using bash in terminal. Subsequent HTTP requests will be made using Python, because that is my preferred coding language. 
+
+Replace capitalized text with your values, and remove brackets.
+
+For PC: Command prompt (NOT PowerShell)
+```
+curl -X POST https://api.dropbox.com/oauth2/token ^
+-d code=<AUTHORIZATIONCODE> ^
+-d grant_type=authorization_code ^
+-d client_id=<APPKEY> ^
+-d client_secret=<APPSECRET>
+```
+For MAC: Terminal
+```
+curl https://api.dropbox.com/oauth2/token \     
+-d code=<AUTHORIZATIONCODE> \     
+-d grant_type=authorization_code \     
+-d client_id=<APPKEY> \
+-d client_secret=<APPSECRET>
+```
+
+Common errors:
+- The authorization code, app key, and appsecret are case sensitive. The authorization code also starts with a hyphen. Make sure all values are entered exactly as they were presented to you. 
+- The authorization expired. Return to step six. 
+
 <ins>Step 9.</ins>
+
+Your output will look something like this. Make note of the value following “refresh token,” highlighted in yellow. 
+
+```
+{
+  "access_token": "sl.u.AGDTMF0mAuwD8reK17hYd1cnlmHSqR8K2WFefrEyaz96FfVMm5DpfK4W77zKsxBV1tGzcc1a0prklqhqymn4KWbouBK-J4BHL4T7nXyCT7l6ehjKFyBoNTAqnN3JNkYccUVubg1tG-4Park8WVqrb3_2P_6uD_YZJAVvGWWi4NWP-0pqA8nkKp_QWSFAXAm7K_8cYI0mufn0Ny8FX5ODtPdUQ8BGwEO4dYYpWqK7st64jnVLH1mLuuOnDNtmCC65hVtDgxYOQr4eGfvKGCFWTeNVg9B8wjYamdQxochwlDmfk765gaLacrF4kQfN53WpAyOpw-OYN_X9n85POQ_rrmZrTR1uIkajbfGn9N0-EaqvaWNEJsKDHTE6kaPSrzYH7b-f9gPsLiruvTsI-nPHrCSfMYpWUyFIo55rRbnem6kdkxOTOm666XKpYlLRiG3pcLkOqFL709NlO3fvTGwWA9JlrFFmqSSkB2nUmEnHyaBFp0VXL9cTdIbjoUP0M-fGuNFpYy2zbE3pvqn5r1eZ9vGIHpkJ85O5sCS2ITa9Ql_ME-8uamkfjRahneMRBtaDofBYBLnM43K7qv1vfygaFBVzN4V-gZJCnYPSRcz6RRO0r5uvwj_w36Xo3VmobvWmba44_I2vEMa8WxIINj4fmSl285O3syUY6lcXChvTrGOuJxD4aNvmUg8QD2lPIpEhnFLMqNmjgmS_nL3zGtePjlRWWsXtceQlOH5jSZNWiFlBaQSVh6_hCnJrEkfzSh2Q1C0U1vaCuRetn4GwCbD6k8lS0H1OQLr-bo-SThBOuMKRo57X6F6-BOPv7wVS0yObEp1SJ6f0uNAQEjrhMYsAvNvNx7EcKSVNmidbpad4NvkmhnhCeDIWFNtg2EJ32nET1pWcU-IMbS5jYhZ2cctaeRFQiStCbqifxohHsTMHYZvQAagw59fOZ4ComkQFlZIzmDH1GnII-eKauWddJs9v-YfqDabAObUz1juD68gm4Z-vCAtrXwZh-uxnYFl_bJ610B96gRon2xUwHbXMLf5FjkRGcG9AzT1UaJdTN_fZbU06_df2gDVIqAWQla8aaU1-4ir-dUDvx64iCnkPB6sa1FUV66bC7L7MVSeRyRSUTH7j1pw_A3J_F9uw42Cgsc1VYUGR7z7engXIn71QUoj4N9HTtnFPhWU5Hx4FrmH8qGuCosGHMeRPzsjd-ZxrjI5PT9LaoeUw4uYSUYZuO9baWgTCN_F0MlkF2LZCiLa5K3uM-8Pz79XNMuX5gvwPkgYS4u4aLIQILP6hnnMbxjundXewnbkLW6z7Jr8EwXewbID5cg",
+  "token_type": "bearer",
+  "expires_in": 14400,
+  "refresh_token": "rlbMz0WYbAoAAAAAAAAAARyM3DMKiS4Z70Dom3B_VsI4KtApC0pA2NMPSHGa75Am",
+  "scope": "account_info.read account_info.write contacts.read contacts.write file_requests.read file_requests.write files.content.write files.metadata.read files.metadata.write sharing.read sharing.write",
+  "uid": "342658846",
+  "account_id": "dbid:AAC64yFYM7rf7k0wkEyO0GKCI805vHmyYzk"
+}
+```
 
 <ins>Step 10.</ins>
