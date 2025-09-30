@@ -83,7 +83,7 @@ Common errors:
 
 <ins>Step 9.</ins>
 
-Your output will look something like this. Make note of the value following “refresh token,” highlighted in yellow. 
+Your output will look something like this. Make note of the value following “refresh token.” 
 
 ```
 {
@@ -97,4 +97,16 @@ Your output will look something like this. Make note of the value following “r
 }
 ```
 
+You’ll also notice that the output includes the access token and keys relevant to it. The access token is what is included in all API requests. These tokens are short-lived, and expire after a period of time. The “expires_in” value is in terms of seconds. If your Dropbox script needs a long time to run, keep in mind that you need to “refresh” this access token during the runtime of your script. 
+
 <ins>Step 10.</ins>
+
+Going forward, to get the access token from the refresh token, you will run this request:
+
+```
+curl https://api.dropbox.com/oauth2/token \
+    -d grant_type=refresh_token \
+    -d refresh_token=<REFRESH_TOKEN> \
+    -d client_id=<APP_KEY> \
+    -d client_secret=<APP_SECRET>
+```
