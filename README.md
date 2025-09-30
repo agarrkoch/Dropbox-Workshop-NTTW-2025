@@ -62,7 +62,7 @@ curl -X POST https://api.dropbox.com/oauth2/token ^
 -d client_id=<APPKEY> ^
 -d client_secret=<APPSECRET>
 ```
-For MAC: Terminal
+For Mac: Terminal
 ```
 curl https://api.dropbox.com/oauth2/token \     
 -d code=<AUTHORIZATIONCODE> \     
