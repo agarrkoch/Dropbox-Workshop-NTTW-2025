@@ -14,7 +14,7 @@ Regardless of your account type, you will have access to the dropbox API. Dropbo
 
 For a list of all HTTP endpoints, refer to this document: https://www.dropbox.com/developers/documentation/http/documentation
   
-Steps 2 through 10 are a concise and accessible summary of the Authorization and /oauth2/authorize sections which make up the top part of this document
+Steps 2 through 10 are a concise and accessible summary of the Authorization and /oauth2/authorize sections which make up the top part of the previously linked document
 
 <ins>Step 2.</ins>
 
