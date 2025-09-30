@@ -24,7 +24,7 @@ Create an application. To do so, click the following link and click “Create Ap
 
 For the purposes of this test application, design an app with the widest scope and access. Click “Create App” to continue. 
 
-<img width="1602" height="685" alt="image" src="https://github.com/user-attachments/assets/8f8e718c-9b2b-49a7-ae05-6c7d0571fb82" />
+<img width="801" height="342" alt="image" src="https://github.com/user-attachments/assets/8f8e718c-9b2b-49a7-ae05-6c7d0571fb82" />
 
 
 
