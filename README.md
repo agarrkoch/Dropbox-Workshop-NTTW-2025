@@ -16,5 +16,22 @@ For a list of all HTTP endpoints, refer to this document: https://www.dropbox.co
   
 Steps 2 through 10 are a concise and accessible summary of the Authorization and /oauth2/authorize sections which make up the top part of this document
 
+<ins>Step 2.</ins>
 
-2. 
+Create an application. To do so, click the following link and click “Create App” https://www.dropbox.com/developers/apps. 
+
+<ins>Step 3.</ins>
+
+For the purposes of this test application, design an app with the widest scope and access. Click “Create App” to continue. 
+
+<img width="1602" height="685" alt="image" src="https://github.com/user-attachments/assets/8f8e718c-9b2b-49a7-ae05-6c7d0571fb82" />
+
+
+
+
+<ins>Step 2.</ins>
+<ins>Step 2.</ins>
+<ins>Step 2.</ins>
+<ins>Step 2.</ins>
+<ins>Step 2.</ins>
+<ins>Step 2.</ins>
