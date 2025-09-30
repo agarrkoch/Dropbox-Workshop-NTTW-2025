@@ -57,18 +57,18 @@ Replace capitalized text with your values, and remove brackets.
 For PC: Command prompt (NOT PowerShell)
 ```
 curl -X POST https://api.dropbox.com/oauth2/token ^
-    -d code=<AUTHORIZATIONCODE> ^
+    -d code=<AUTHORIZATION_CODE> ^
     -d grant_type=authorization_code ^
-    -d client_id=<APPKEY> ^
-    -d client_secret=<APPSECRET>
+    -d client_id=<APP_KEY> ^
+    -d client_secret=<APP_SECRET>
 ```
 For Mac: Terminal
 ```
 curl https://api.dropbox.com/oauth2/token \     
-    -d code=<AUTHORIZATIONCODE> \     
+    -d code=<AUTHORIZATION_CODE> \     
     -d grant_type=authorization_code \     
-    -d client_id=<APPKEY> \
-    -d client_secret=<APPSECRET>
+    -d client_id=<APP_KEY> \
+    -d client_secret=<APP_SECRET>
 ```
 
 Common errors:
