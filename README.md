@@ -26,12 +26,19 @@ For the purposes of this test application, design an app with the widest scope a
 
 <img width="801" height="342" alt="image" src="https://github.com/user-attachments/assets/8f8e718c-9b2b-49a7-ae05-6c7d0571fb82" />
 
+<ins>Step 4.</ins>
+
+You will be redirected to your new applications settings page. Click the permissions tab.
+
+<img width="697" height="168" alt="image" src="https://github.com/user-attachments/assets/5d7b7fbf-cf26-413b-8b56-6e1c9078438f" />
 
 
+<ins>Step 2.</ins>
 
 <ins>Step 2.</ins>
+
 <ins>Step 2.</ins>
+
 <ins>Step 2.</ins>
-<ins>Step 2.</ins>
-<ins>Step 2.</ins>
+
 <ins>Step 2.</ins>
