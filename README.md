@@ -28,15 +28,11 @@ For the purposes of this test application, design an app with the widest scope a
 
 You will be redirected to your new applications settings page. Click the permissions tab.
 
-<img width="348" height="84" alt="image" src="https://github.com/user-attachments/assets/5d7b7fbf-cf26-413b-8b56-6e1c9078438f" />
-
 And set the widest Individual Scopes for the purposes of this test application, i.e. write permissions for all categories, and press submit. As you go on to create other applications, you can be more selective with permissions and explore the Team Scopes area. 
 
 <ins>Step 5.</ins>
 
 Return to the permission table and make a note of your App Key and your App Secret:
-
-<img width="276" height="76" alt="image" src="https://github.com/user-attachments/assets/31b87c85-a57a-4964-8628-e5491bdd47df" />
 
 <ins>Step 6.</ins>
 
