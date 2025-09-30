@@ -32,13 +32,28 @@ You will be redirected to your new applications settings page. Click the permiss
 
 <img width="348" height="84" alt="image" src="https://github.com/user-attachments/assets/5d7b7fbf-cf26-413b-8b56-6e1c9078438f" />
 
+And set the widest Individual Scopes for the purposes of this test application, i.e. write permissions for all categories, and press submit. As you go on to create other applications, you can be more selective with permissions and explore the Team Scopes area. 
 
-<ins>Step 2.</ins>
+<img width="573" height="444" alt="image" src="https://github.com/user-attachments/assets/88588c1e-2d36-454a-b5c7-d278a303cb61" />
 
-<ins>Step 2.</ins>
+<ins>Step 5.</ins>
 
-<ins>Step 2.</ins>
+Return to the permission table and make a note of your App Key and your App Secret:
 
-<ins>Step 2.</ins>
+<img width="276" height="76" alt="image" src="https://github.com/user-attachments/assets/31b87c85-a57a-4964-8628-e5491bdd47df" />
 
-<ins>Step 2.</ins>
+<ins>Step 6.</ins>
+
+Go to the following URL, but replace APPKEYHERE with your App Key. 
+
+```
+https://www.dropbox.com/oauth2/authorize?client_id=APPKEYHERE&response_type=code&token_access_type=offline
+```
+
+<ins>Step 7.</ins>
+
+<ins>Step 8.</ins>
+
+<ins>Step 9.</ins>
+
+<ins>Step 10.</ins>
