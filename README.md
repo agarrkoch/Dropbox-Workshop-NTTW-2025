@@ -1,6 +1,6 @@
 # Dropbox-Workshop-NTTW-2025
 
-This is a quick guide for how to set up your dropbox account for API access, as well as a summar of the files in this repository. 
+This is a quick guide for how to set up your dropbox account for API access, and a collection of the most relevant HTTP requests for archivists who are coding novices.
 
 ## Setting Up
 
