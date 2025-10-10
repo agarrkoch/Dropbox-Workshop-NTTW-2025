@@ -1,0 +1,36 @@
+import requests
+import json
+import os
+
+KEYS_JSON_PATH = os.path.join(os.path.dirname(__file__), "dropbox_keys.json")
+APP_KEY = ''
+APP_SECRET = ''
+REFRESH_TOKEN = ''
+ACCESS_TOKEN = ''
+
+def load_keys():
+    global APP_KEY, APP_SECRET, REFRESH_TOKEN
+    with open(KEYS_JSON_PATH, "r") as f:
+        data = json.load(f)
+
+    APP_KEY = data["app_key"]
+    APP_SECRET = data["app_secret"]
+    REFRESH_TOKEN = data["refresh_token"]
+
+def refresh_access_token():
+    global APP_KEY, APP_SECRET, REFRESH_TOKEN, ACCESS_TOKEN
+    url = "https://api.dropbox.com/oauth2/token"
+
+    data = {
+        "grant_type": "refresh_token",
+        "refresh_token": REFRESH_TOKEN,
+        "client_id": APP_KEY,
+        "client_secret": APP_SECRET
+    }
+
+    response = requests.post(url, data=data)
+    ACCESS_TOKEN = response.json()["access_token"]
+
+load_keys()
+refresh_access_token()
+print(ACCESS_TOKEN)
