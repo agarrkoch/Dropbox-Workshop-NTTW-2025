@@ -98,6 +98,14 @@ You’ll also notice that the output includes the access token and keys relevant
 Going forward, to get the access token from the refresh token, you will run this request:
 
 ```
+curl https://api.dropbox.com/oauth2/token ^
+-d grant_type=refresh_token ^
+-d refresh_token=<REFRESH_TOKEN> ^
+-d client_id=<APP_KEY> ^
+-d client_secret=<APP_SECRET>
+```
+
+```
 curl https://api.dropbox.com/oauth2/token \
 -d grant_type=refresh_token \
 -d refresh_token=<REFRESH_TOKEN> \
